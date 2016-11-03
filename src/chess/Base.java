@@ -34,4 +34,12 @@ public abstract class Base {
     public void setPos(Point2D pos) {
         this.pos = pos;
     }
+    
+    public double getX(){
+        return this.getPos().getX();
+    }
+    
+    public double getY(){
+        return this.getPos().getY();
+    }
 }

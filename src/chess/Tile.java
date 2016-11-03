@@ -27,12 +27,6 @@ public class Tile extends Base {
         this.color = color;
     }
     
-    public double getX(){
-        return this.getPos().getX();
-    }
-    
-    public double getY(){
-        return this.getPos().getY();
-    }
+
 
 }

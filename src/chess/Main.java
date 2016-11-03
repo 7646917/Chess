@@ -17,7 +17,7 @@ public class Main extends Application {
         primaryStage.setTitle("Chess");
 
         Group root = new Group();
-        Canvas canvas = new Canvas(200,200);
+        Canvas canvas = new Canvas(800,800);
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         for(Tile t : gameController.getChessBoard().getTiles()){
@@ -25,7 +25,7 @@ public class Main extends Application {
         }
         
         root.getChildren().add(canvas);
-        primaryStage.setScene(new Scene(root, 800, 600));
+        primaryStage.setScene(new Scene(root, 800, 800));
         primaryStage.show();
     }
 

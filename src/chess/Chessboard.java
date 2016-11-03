@@ -5,6 +5,7 @@ import javafx.geometry.Point2D;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
+import java.util.List;
 import javafx.scene.image.Image;
 
 /**
@@ -33,15 +34,17 @@ public class Chessboard {
      */
     private void createPieces() {
         //y2 and y7 all pawns.
-
-        for (int x = 1; x <=size ; x++) {
-            for (int y = 1; y <=size; y++) {
-                //pawns.add()
-            }
-
-        }
+        
+        createPawns();
 
         //pieces.add(pieces.);
+    }
+    
+    
+    private void createPawns() {
+        //create black pawns
+        //for(int x = )
+        
     }
 
     /**
@@ -56,24 +59,23 @@ public class Chessboard {
             }
         }
         setTileImage();
-        offsetTilePosition();
+        ArrayList<Base> tileBase = (ArrayList)tiles;
+        offsetPosition(tileBase);
         tileDebug();
     }
     
-    private void offsetTilePosition(){
-        //Offset the tiles x and y by its width and height.
-        
-        for(Tile t : tiles){
+    private void offsetPosition(ArrayList<Base> units){
+        //Offset the tiles x and y by its width and height. 
+        for(Base t : units){
             double offsetX = t.getImg().getWidth();
             double offsetY = t.getImg().getWidth();
             t.setPos(new Point2D(t.getX() * offsetX, t.getY() * offsetY));
         }
     }
     
-
     private void setTileImage(){
-        Image white = new Image("tilewhite.png");
-        Image black = new Image("tileblack.png");
+        Image white = new Image("resources/tilewhite.png");
+        Image black = new Image("resources/tileblack.png");
         for (Tile t: tiles) {
             if(t.getColor() == Color.BLACK){
                 t.setImg(black);
@@ -142,4 +144,5 @@ public class Chessboard {
         }
 
     }
+
 }
