@@ -1,25 +1,36 @@
 package chess;
 
+import javafx.scene.canvas.GraphicsContext;
+
 public class Controller {
 
 
-    Chessboard chessboard;
+    Chessboard chessBoard;
 
     public Controller() {
         
     }
 
     public void initializeGame() {
-        chessboard = new Chessboard(8);
+        chessBoard = new Chessboard(8);
     }
     
     
     public Chessboard getChessBoard(){
-        return this.chessboard;
+        return this.chessBoard;
     }
-    //Create Tiles DONE
-
-    //Create Pieces 
-
-    //SetBoard
+    
+    public void draw(GraphicsContext gc){
+        //Draw Tiles
+        for(Tile t : chessBoard.getTiles()){
+            gc.drawImage(t.getImg(),t.getPos().getX(),t.getPos().getY());   
+        }
+        
+        //Draw Pieces
+        /*
+        for(GamePiece p : chessBoard.getPawns()){
+            gc.drawImage(p.getImg(),p.getPos().getX(),p.getPos().getY());   
+        }
+        */
+    }
 }

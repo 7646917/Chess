@@ -32,6 +32,9 @@ public abstract class GamePiece extends Base {
         this.color = color;
         this.pieceType = pieceType;
     }
+    public Color getColor(){
+        return this.color;
+    }
 
     public abstract void move(Tile newPos);
     public abstract ArrayList<Tile> legalMoves();

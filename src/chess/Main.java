@@ -19,10 +19,8 @@ public class Main extends Application {
         Group root = new Group();
         Canvas canvas = new Canvas(800,800);
         GraphicsContext gc = canvas.getGraphicsContext2D();
+        gameController.draw(gc);
 
-        for(Tile t : gameController.getChessBoard().getTiles()){
-            gc.drawImage(t.getImg(),t.getPos().getX(),t.getPos().getY());   
-        }
         
         root.getChildren().add(canvas);
         primaryStage.setScene(new Scene(root, 800, 800));

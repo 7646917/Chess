@@ -27,6 +27,13 @@ public class Chessboard {
         return this.tiles;
     }
 
+    public ArrayList<GamePiece> getPawns(){
+        return this.pawns;
+    }
+
+    public ArrayList<GamePiece> getPieces(){
+        return this.pieces;
+    }
 
     
     /**
@@ -43,7 +50,11 @@ public class Chessboard {
     
     private void createPawns() {
         //create black pawns
-        //for(int x = )
+        pawns = new ArrayList<>();
+        //Point2D pos = new Point2D(0,0);
+        for(int x = 0; x < size; x++){
+          pawns.add(new Pawn("Pawn " + x, new Point2D(x,7),Color.BLACK ));
+        }
         
     }
 
