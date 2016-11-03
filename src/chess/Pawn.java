@@ -18,6 +18,7 @@ public class Pawn extends GamePiece {
 
     public Pawn(String name, Point2D pos, Color color) {
         super(name, pos, color);
+        setImage();
     }
     
     private void setImage(){

@@ -27,10 +27,11 @@ public class Controller {
         }
         
         //Draw Pieces
-        /*
+        
         for(GamePiece p : chessBoard.getPawns()){
             gc.drawImage(p.getImg(),p.getPos().getX(),p.getPos().getY());   
+            //System.out.println(p.getPos());
         }
-        */
+        
     }
 }
